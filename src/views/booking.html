@@ -1,0 +1,76 @@
+<section class="row">
+
+    <h1>Book a Consultation</h1>
+    <div class="card">
+        <div class="cont_devider">
+            <p class="large-12">Book this consultation for</p>
+            <div ng-repeat="user in users" class="user_wrap small-1 large-4  columns">
+                <img src="images/{{user.img}}">
+                <p>{{user.forename}} {{user.surname}}</p>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="cont_devider">
+            <p>Select a healthcare professional</p>
+            <div ng-repeat="gb in gbs" class="gb_wrap small-1 large-4  columns">
+                <img src="images/gp.PNG">
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="cont_devider">
+            <p>Select the doctor</p>
+            <select name="doctor" 
+            ng-model="selectedDoctor"  
+            ng-options="doctor.id as doctor.forename + ' ' + doctor.surname for doctor in doctors track by doctor.id"> 
+            </select>
+        </div>
+        <div class="cont_devider">
+            <p>Next available appointment</p>
+            <select name="slot" 
+            ng-model="selectedSlot" 
+            ng-options="slot.id as slot.time for slot in slots | filter:{'drID':  selectedDoctor , 'booked':'0'} | orderBy: slot.time  track by slot.id">
+            </select>
+        </div>
+        <input type="button" ng-click="bookAppointment()" name="book_appoinment" class="btn centre" value="Book consultation">
+    </div>
+
+    <div>
+        <h1>Test area</h1>
+        <h2>Booked Slots</h2>
+            <table class="table table-striped">
+                <tr>
+                    <td>Slot ID</td>
+                    <td>GB ID</td>
+                    <td>DR ID</td>
+                    <td>Booked</td>
+                    <td>Time</td>
+                </tr>
+              <tr ng-repeat="slot in slots | filter:{'booked':'1'}">
+                    <td>{{ slot.id }}</td>
+                    <td>{{ slot.gbID }}</td>
+                    <td>{{ slot.drID }}</td>
+                    <td>{{ slot.booked }}</td>
+                    <td>{{ slot.time }}</td>
+                </tr>    
+            </table>
+    </div>
+
+    <div>
+        <h1>Test area</h1>
+        <h2>Booked Appointments</h2>
+            <table class="table table-striped">
+                <label>Search</label><input type="text" ng-model="appointmentSearch.id">
+                <tr>
+                    <td>ID</td>
+                    <td>Slot ID</td>
+                    <td>User ID</td>
+                </tr> 
+                <tr ng-repeat="appon in appointments | filter:appointmentSearch">
+                    <td>{{ appon.id }}</td>
+                    <td>{{ appon.slotID }}</td>
+                    <td>{{ appon.userID }}</td>
+                </tr>    
+            </table>
+    </div>
+
+</section>

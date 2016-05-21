@@ -1,0 +1,140 @@
+html,
+body {
+  background: #f8f8f8;
+}
+.clr {
+  clear: both;
+  width: 100%;
+}
+.row {
+  max-width: 48.5rem;
+}
+header {
+  background-color: #827096;
+}
+header nav ul {
+  margin: 0;
+  padding: 10px 0;
+}
+header nav ul i.fa {
+  color: #fff;
+  font-size: 30px;
+  margin-right: 20px;
+}
+header nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+  color: #fff;
+}
+header nav ul li a {
+  color: #fff;
+}
+header nav ul li a:hover,
+header nav ul li a:focus {
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #fff;
+}
+.page section {
+  color: #736f79;
+}
+.page section .cont {
+  padding: 0 15px;
+  float: left;
+}
+.page section .cont_devider {
+  border-bottom: 1px solid #736f79;
+  padding: 15px 0;
+}
+.page section .cont_devider:first-child {
+  padding-top: 0;
+}
+.page section .cont_devider p {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px!important;
+}
+.page section .cont_devider .user_wrap {
+  display: block;
+}
+.page section .cont_devider select {
+  border: none;
+  float: none;
+  max-width: 200px;
+  margin-top: 20px;
+  font-size: 13px;
+  padding: 10px;
+  background-color: #7fc6cc;
+  width: 100%;
+  color: #fff;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: block;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.page section .cont_devider select::-ms-expand {
+  display: none;
+}
+.page section .cont_devider img {
+  display: block;
+  margin: 0 auto;
+}
+.page section h1 {
+  font-size: 30px;
+  padding: 20px 0 10px;
+}
+.page section .card {
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 1px 1px #615a61;
+  -moz-box-shadow: 0px 1px 1px 1px #615a61;
+  box-shadow: 0px 1px 1px 1px #615a61;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.page section .card p {
+  font-size: 17px;
+  margin: 0;
+  line-height: 20px;
+}
+.page section .card img.full {
+  width: 100%;
+}
+.page section .card h2 {
+  font-size: 27px;
+}
+.page section .card h2 i {
+  margin-right: 20px;
+  background-color: #827096;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+}
+.page section .card h4 {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.page section .card input.btn,
+.page section .card a.btn {
+  background-color: #618ac3;
+  color: #d1f1ff;
+  padding: 10px 20px;
+  float: left;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.page section .card input.btn.centre,
+.page section .card a.btn.centre {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  float: none;
+  max-width: 200px;
+  margin-top: 20px;
+  font-size: 13px;
+  padding: 10px;
+}

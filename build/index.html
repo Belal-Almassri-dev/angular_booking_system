@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Test</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,700,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/font-awesome/font-awesome.css">
+  <link rel="stylesheet" href="styles/foundation.css">
+  <link rel="stylesheet" href="styles/result.css">
+  
+
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+  <script src="js/lib/angular/angular-animate.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers/booking.js"></script>
+  <script src="js/controllers/home.js"></script>
+
+</head>
+<body>
+<header>
+    <nav class="row">
+    	<ul class="">
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+        	<li><a href="#/home">Home</a></li>
+        	<li><a href="#/booking">Book a Consultation</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="page">
+  <main class="cf" ng-view>
+
+  </main>
+</div>
+</body>
+</html>
